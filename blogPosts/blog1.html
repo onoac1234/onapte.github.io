@@ -40,26 +40,95 @@
     </nav>
     <div class="blog">
         <h1>
-            <center>My blog title</center>
+            <center>Beginning with React</center>
         </h1>
         <div class="blog-title-image-div">
-            <img src="https://static.nationalgeographic.co.uk/files/styles/image_3200/public/LAL_PAR_2660.jpg_HR_WEB.jpg?w=1600&h=900"
-                class="blog-title-image">
+            <img src="https://miro.medium.com/max/10944/1*wu6qXp4UKhG4yURYIll61g.jpeg" class="blog-title-image">
         </div>
         <div class="content">
-            This is my blog content. Simply made this using html. This blog is simply amazing.
+            So, after having worked with django and getting hang of some really good backend practices, I have now
+            decided to dive into the frontend part. I feel that attempting to create some rich user interfaces with just
+            html, CSS and Vanill Js is not feasible. For this purpose, I have decided to start with React. Ofcourse, I
+            could have choosen other frontend frameworks, but again, React wins as it is currently the most popular.
             <br>
-            This is one simple blog and I would like to add that this one was amazing. If you gained some good skills with the help of my blog and would like to thank me, I would recommend you to follow me on my github.
             <br>
-            <code>Hello, World!</code>
-            <pre><code class="javaScript">let c = document.querySelector("a");</code></pre>
+            There are a couple of more reasons why I feel one must know frontend frameworks.
+            <br>
+
+            <h3>Vanilla Js is too complicated for large apps</h3>
+            Look at the below code.
+            <pre><code class="javascript">
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    myNodelist[i].appendChild(span);
+}
+
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+    if (ev.target.tagName === 'LI') {
+        ev.target.classList.toggle('checked');
+    }
+    }, false);
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+            </code></pre>
+
+            <br>
+            Just to create a simple todo list in Vanilla Js takes a lot of time (and effort).
+            <br>
+            <br>
+
+            <h3>No code reusability in Vanilla js</h3>
+            This one's pretty obvious! It is one of the reasons why Vanilla Js is not implemented for large apps.
+            
+            <br>
+            <br>
+            Ofcourse, my aim is not to degrade Vanilla Js, but it is pretty clear that it is clearly not the best to use for particularly larger apps. So, starting from the next blog I will continue to update what concepts I have learned or what projects I have done or being doing in React.
             <div class="content-image-div">
-                <img src="https://i.ytimg.com/vi/oxeMz73sqts/maxresdefault.jpg" class="content-image">
+                <img src="https://cdn.evilmartians.com/front/posts/optimizing-react-virtual-dom-explained/cover-a1d5b40.png" class="content-image">
             </div>
-            Another amazing content
-            <br>
-            This is amazing
-            <q>Code east or west</q>
+            Stay tuned and let the new journey begin!
         </div>
     </div>
     <script src="assets/js/index.js"></script>
