@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS Styles -->
+    <link rel="stylesheet" href="/A:/Personal website/assets/css/styles.css" />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png" />
+
+    <!-- Animate CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <title>Document</title>
+    <link rel="stylesheet" href="blogStyles.css" />
+
+</head>
+
+<body>
+    <nav>
+        <h1>ONKAR APTE @onapte</h1>
+        <ul class="navigation">
+            <li><a href="index.html#about" class="nav-link">About</a></li>
+            <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+            <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+            <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+        </ul>
+        <button class="burger-menu" id="burger-menu">
+            <ion-icon class="bars" name="menu-outline"></ion-icon>
+        </button>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js" integrity="sha512-IaaKO80nPNs5j+VLxd42eK/7sYuXQmr+fyywCNA0e+C6gtQnuCXNtORe9xR4LqGPz5U9VpH+ff41wKs/ZmC3iA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </nav>
+    <div class="blog">
+        <h1>
+            <center>React journey - Part 1</center>
+        </h1>
+        <div class="blog-title-image-div">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--3zWuwYa3--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/pdib9r9rk5j1m7oala1p.png"
+                class="blog-title-image">
+        </div>
+        <div class="content">
+            So, I have finally started my React journey. The first basic part to learn in React is about components. Understanding why we need components can take a little bit of time, but it is worth the effort.
+            <br>
+            <br>
+            <br>
+            I first began with a simple book app where the idea is to create a book store like interface where a number of different books are displayed with their details. So, it should look something like below.
+            <div class="content-image-div">
+                <img src="https://lh3.googleusercontent.com/IH9lljdRV8P5PxzdDKKBd7ndTPLmET0KYAiESUXTcaknIgj-S4ojSdg4ZNzhX_Y2lDFQeySK65GZ-eSbhEtfYIYY=w640-h400-e365-rj-sc0x00ffffff" class="content-image">
+            </div>
+            Please disregard the "Google" symbol. Ofcourse, I would like to add some more details for each of the book.
+            <br>
+            <br>
+            <br>
+            So, I opened up the command prompt (I am on Windows) and created an app named <b>book-store</b> using <code>create-react-app</code>.
+            <div class="content-image-div">
+                <img src="blogImages/blog2/img1.png" class="content-image">
+            </div>
+            The initial interface will look like this (inside VSCode).
+            <div class="content-image-div">
+                <img src="blogImages/blog2/img2.png" class="content-image">
+            </div>
+            I quickly created a new component named "Book" and imported it to the <code>App.js</code> file. The code which I wrote inside the <code>Book.js</code> file is given below.
+            <br>
+            <pre><code>
+import React from 'react'
+
+function Book(props) {
+    return (
+        &lt;div className="book"&lt;
+        &lt;img src="https://kbimages1-a.akamaihd.net/219159f1-5a27-42a0-a3d7-6c3df5a521b5/1200/1200/False/treasure-island-78.jpg" className="book-image" /&gt; &lt;br /&gt;
+            Title: { props.title } &lt;br /&gt;
+            Price: ${ props.price } &lt;br /&gt;
+            Author: { props.author } &lt;br /&gt;
+        &lt;/div&gt;
+    )
+}
+
+export default Book;
+            </code></pre>
+            <br>
+            And the corresponding CSS below.
+            <pre><code>
+/* css for Book */
+.book {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 800px;
+  width: 75%;
+  border: 1px solid ghostwhite;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.book-image {
+  height: 200px;
+}
+            </code></pre>
+            <br>
+            Want to check the output as well? Check below.
+            <div class="content-image-div">
+                <img src="blogImages/blog2/img3.png" class="content-image">
+            </div>
+            This is just for one book. After adding more books, the result will look something like below.
+            <div class="content-image-div">
+                <img src="blogImages/blog2/img4.png" class="content-image">
+            </div>
+            The app is scalable as well; thanks to the CSS. That's it. Stay tuned for more blogs!
+        </div>
+    </div>
+
+</body>
+
+</html>
