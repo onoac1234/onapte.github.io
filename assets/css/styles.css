@@ -414,4 +414,60 @@ nav ul li {
     }
   }
 
+.text-1 {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    color: blue;
+    white-space: nowrap;
+    animation: 
+      typing1 2s steps(20, end) forwards,
+      blinking 0.8s infinite;
+    font-size: 1.4rem;
+    width: 0;
+  }
+
+  .text-2 {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    color: darkmagenta;
+    white-space: nowrap;
+    animation: 
+      typing2 2s steps(20, end) forwards,
+      blinking 0.8s infinite;
+    animation-delay: 2.5s;
+    font-size: 1.4rem;
+    width: 0;
+  }
   
+  .text-3 {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    color:forestgreen;
+    white-space: nowrap;
+    animation: 
+      typing3 2s steps(20, end) forwards,
+      blinking 0.8s infinite;
+    animation-delay: 4.5s;
+    font-size: 1.4rem;
+    width: 0;
+  }
+
+  @keyframes typing1 {
+    from { width: 0 }
+    to { width: 137px }
+  }
+
+  @keyframes typing2 {
+    from { width: 0 }
+    to { width: 174.7px }
+  }
+
+  @keyframes typing3 {
+    from { width: 0 }
+    to { width: 148px }
+  }
+
+  @keyframes blinking {
+    from { border-color: transparent }
+    to { border-color: orange; }
+  }
