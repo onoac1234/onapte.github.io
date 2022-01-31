@@ -51,10 +51,20 @@
     max-width: 100%;
 }
 
+.blog-comments-large {
+        display: none;
+    }
+
 @media screen and (max-width: 720px) {
 
     .sidebar {
         display: none;
+    }
+    
+    .blog-comments-large {
+        display: block;
+        margin: 1%;
+        width: 98%;
     }
 
     .content {
